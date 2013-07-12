@@ -649,6 +649,7 @@ struct DvmGlobals {
     AllocRecord*    allocRecords;
     int             allocRecordHead;        /* most-recently-added entry */
     int             allocRecordCount;       /* #of valid entries */
+    int             allocRecordMax;         /* Number of allocated entries. */
 
     /*
      * When a profiler is enabled, this is incremented.  Distinct profilers
