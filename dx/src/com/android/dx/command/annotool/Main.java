@@ -31,7 +31,7 @@ import java.io.File;
 import java.lang.annotation.ElementType;
 import java.util.EnumSet;
 import java.util.Arrays;
-
+import java.util.Locale;
 
 public class Main {
 
@@ -88,7 +88,7 @@ public class Main {
 
                     try {
                         for (String p : argParam.split(",")) {
-                            eTypes.add(ElementType.valueOf(p.toUpperCase()));
+                            eTypes.add(ElementType.valueOf(p.toUpperCase(Locale.ROOT)));
                         }
                     } catch (IllegalArgumentException ex) {
                         throw new InvalidArgumentException(
@@ -99,7 +99,7 @@ public class Main {
 
                     try {
                         for (String p : argParam.split(",")) {
-                            printTypes.add(PrintType.valueOf(p.toUpperCase()));
+                            printTypes.add(PrintType.valueOf(p.toUpperCase(Locale.ROOT)));
                         }
                     } catch (IllegalArgumentException ex) {
                         throw new InvalidArgumentException("invalid --print");
